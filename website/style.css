@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --clearpurple: #3a2d80;
+  --lighterpurple: #a763f6;
+  --pinkalicious: #f794ff;
+  --pink: #ff74ed;
+  --snowflake: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--snowflake);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION BAR */
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clearpurple);
+  color: var(--snowflake);
+  z-index: 1;
+}
+
+header .logo {
+  height: 80px;
+  width: 90px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation .menuItem {
+  color: var(--snowflake);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2px 15px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navigation .menuItem:hover,
+.navigation a.active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--lighterpurple);
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: var(--snowflake);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+
+.dropdown_content a {
+  color: var(--clearpurple);
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.dropdown_content a:hover {
+  background-color: #e0e0e0;
+}
+
+#landing {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to bottom, var(--clearpurple), var(--lighterpurple));
+  color: whitesmoke;
+}
+
+#landing img {
+  display: block;
+  height: 80%;
+  width: 60%;
+  margin: 0;
+  border-radius: 0% 100% 32% 68% / 100% 0% 100% 0%;
+}
+
+.landing {
+  display: flex;
+  width: 40vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.landing img {
+  display: block;
+  transform: scale(1.4);
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+#about div b {
+  font-size: 1.5em;
+  color: var(--clearpurple);
+  padding-left: 0.5%;
+}
+
+#about div {
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--pinkalicious);
+  margin-left: 1%;
+}
+
+#about p {
+  font-size: 1.5em;
+  columns: #1a202c;
+  display: block;
+  width: 85vw;
+  position: relative;
+  left: 9vw;
+}
+
+#contact {
+  background: var(--lighterpurple);
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--snowflake);
+}
+.media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 30vw;
+  flex-direction: column;
+}
+.media-icons img{
+  height: 80px;
+  width: 90px;
+}
+.contactHeading{
+  font-size: larger;
+}
+.media-icons-links a {
+  text-decoration: none;
+  color: var(--snowflake);
+  font-size: 2em;
+  margin-left: 20px;
+}
+#contact::after{
+  content: '©2022 Copyright: Intrahack SFIT';
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  bottom: 0;
+  height: 4vh;
+  background-color: var(--clearpurple);
+  color: var(--snowflake);
+}
+.contact{
+  font-size: 2em;
+  color: var(--clearpurple);
+}
+.media-icons-links a:hover {
+  color: var(--clearpurple);
+}
+
+
+/* MEDIA QUERRIES HOME PAGE */
+@media (max-width: 900px) {
+  #landing {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navigation .menuItem {
+    padding: 2px 5px;
+    font-size: 12px;
+
+  }
+
+  .dropdown:hover .dropdown_content {
+    display: none;
+  }
+
+  #about {
+    position: relative;
+    top: 20vh;
+  }
+
+  #about div {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  #about div b {
+    font-size: 1.2em;
+  }
+
+  #about p {
+    font-size: 1.2em;
+  }
+
+  #contact {
+    bottom: -55vh;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #contact::after{
+    background-color: var(--lighterpurple);
+    font-size: 1.2em;
+  }
+  .contact{
+    text-align: center;
+  }
+  .media-icons{
+    margin-top: 0px;
+    justify-content: center;
+  }
+}
+
+@media (max-width:800px) {
+  #contact{
+    flex-direction: column;
+    height: 50vh;
+  }
+  .media-icons{
+    width: 100vw;
+  }
+
+}
+
+/* *****MEMBERS PAGE***** */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  top: 20vh;
+  width: 100vw;
+}
+
+.card {
+  height: 300px;
+  width: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe;
+  margin: 30px;
+}
+.card_container{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card_image img {
+  height: 300px;
+  width: 250px;
+}
+
+.card_info {
+  display: block;
+  position: relative;
+  top: 30px;
+  color: var(--snowflake);
+  transition: all 1s;
+  transition-timing-function: ease-out;
+  text-align: center;
+}
+
+.card_info h3 {
+  background-color: var(--clearpurple);
+}
+
+.card_info div {
+  background-color: var(--lighterpurple);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+  border-radius: 30px;
+}
+
+.card:hover .card_info {
+  top: -55px;
+}
+
+#members {
+  position: absolute;
+  top: 14vh;
+  left: 2vw;
+  font-size: 3em;
+  color: var(--pinkalicious);
+  font-weight: 700;
+}
+
+#members b {
+  color: var(--clearpurple);
+}
+
+/* *****EVENTS PAGE***** */
+#carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-image: linear-gradient(to bottom, var(--clearpurple), var(--lighterpurple));
+  height: 90vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+#carousel::before {
+  content: "Event 2k22";
+  position: absolute;
+  left: 5vw;
+  top: 15vh;
+  font-size: 2em;
+  font-weight: 900;
+  color: var(--pink);
+  display: block;
+}
+
+#carousel::after {
+  content: "Here are some of the event clips we organized at SFIT";
+  color: whitesmoke;
+  position: absolute;
+  left: 5vw;
+  top: 22vh;
+  font-size: 1.2em;
+  font-weight: 600;
+  display: flex;
+  width: 15vw;
+  display: block;
+  flex-wrap: wrap;
+}
+
+.carousel_container {
+  position: absolute;
+  top: 15vh;
+  height: 65vh;
+  width: 60vw;
+  border: 3px solid var(--pinkalicious);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, var(--pinkalicious), var(--pink));
+}
+
+.carousel_wrapper {
+  display: flex;
+  height: 60vh;
+  width: 540vw;
+  transition: all 1s ease-in-out;
+}
+
+.carousel_wrapper img {
+  display: block;
+  height: 60vh;
+  width: 60vw;
+}
+
+.carousel_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60vw;
+}
+
+.director {
+  color: var(--lighterpurple);
+  font-weight: 900;
+  font-size: 2.5em;
+  height: 5vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1vh;
+}
+
+.imgNo {
+  margin: 4px 4px;
+}
+
+#footer {
+  position: absolute;
+  top: 100vh;
+}
+
+#footer h2 {
+  font-size: 2.5em;
+  font-weight: 900;
+  color: var(--clearpurple);
+}
+
+#footer p {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #1a202c;
+  display: block;
+  position: relative;
+  left: 3vw;
+}
+
+#teams{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 110vh;
+}
+
+.team{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+  width: 50vw;
+}
+.team:not(:first-child){
+  margin: 20px 0px;
+}
+.team ul{
+  display: block;
+}
+
+.team img{
+  display: block;
+  height: 35vh;
+  width: 20vw;
+  border-radius: 10px;
+}
+
+.teamMember:first-child{
+  font-weight: bold;
+}
+.teamMember{
+  display: flex;
+  flex-wrap: wrap;
+  width: 15vw;
+}
+
+.teamMember:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.team img:hover{
+  transform: scale(1.2);
+}
+
+
+/* *****MEDIA QUERRY FOR EVENTS PAGE***** */
+
+@media (max-width:1100px) {
+  #carousel::after {
+    content: "";
+  }
+
+  #carousel::before {
+    content: "";
+  }
+  #teams{
+    top: 120vh;
+  }
+}
+
+@media(max-width:1000px) {
+
+  .carousel_container,
+  .carousel_wrapper img,
+  .director,
+  .carousel_img {
+    width: 100vw;
+  }
+  
+  #footer h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  
+  #footer p {
+    font-size: 1.2em;
+    font-size: 400;
+  }
+  #team{
+    top: 80vh;
+  }
+  .team{
+   flex-direction: column;
+   justify-content: center;
+   height: 80vh;
+  }
+  .team img{
+    width: 80vw;
+    height: 50vh;
+  }
+  .teamMember{
+    width:60vw;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width:500px) {
+  #carousel {
+    height: 60vh;
+
+  }
+
+  .carousel_container {
+    height: 45vh;
+  }
+
+  .carousel_wrapper,
+  .carousel_img {
+    height: 40vh;
+  }
+
+  #footer {
+    top: 65vh;
+  }
+
+  #footer h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  #footer p {
+    font-size: 1em;
+    font-size: 400;
+  }
+  #teams{
+    top: 75vh;
+  }
+  .team img{
+    display: none;
+  }
+  .team{
+    height: 30vh;
+  }
+  .teamMember{
+    width: 100vw;
+  }
+  #members {
+    top: 18vh;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .container {
+    top: 22vh;
+  }
+}
