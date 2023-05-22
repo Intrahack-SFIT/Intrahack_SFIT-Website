@@ -7,8 +7,8 @@ This website is hosted using netlify<br>
 <a href="https://intrahacksfit.netlify.app">https://intrahacksfit.netlify.app/</a>
 
 ## Images
-![](ss/ss-home1.jpg)
-![](ss/ss-home2.jpg)
-![](ss/ss-members.jpg)
-![](ss/ss-events1.jpg)
-![](ss/ss-events2.jpg)
+![](ss/ss-home1.PNG)
+![](ss/ss-home2.PNG)
+![](ss/ss-members.PNG)
+![](ss/ss-events1.PNG)
+![](ss/ss-events2.PNG)
